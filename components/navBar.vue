@@ -6,14 +6,14 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav id="nav-button-container" class="d-flex justify-content-around w-100" align="center">
-        <b-nav-item-dropdown class="BFME-btn" :text="$t('navBar.home.home')">
+        <b-nav-item-dropdown menu-class="w-100" class="BFME-btn" :text="$t('navBar.home.home')">
           <b-dropdown-item href="#">{{ $t('navBar.home.info') }}</b-dropdown-item>
           <b-dropdown-item href="#">{{ $t('navBar.home.community') }}</b-dropdown-item>
           <b-dropdown-item href="#">{{ $t('navBar.home.rules') }}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item class="BFME-btn" href="#">{{ $t('navBar.ranking') }}</b-nav-item>
         <b-nav-item class="BFME-btn" href="#">{{ $t('navBar.replayDb') }}</b-nav-item>
-        <b-nav-item-dropdown class="BFME-btn" :text="$t('navBar.statistics.statistics')">
+        <b-nav-item-dropdown menu-class="w-100" class="BFME-btn" :text="$t('navBar.statistics.statistics')">
           <b-dropdown-item href="#">{{ $t('navBar.statistics.general') }}</b-dropdown-item>
           <b-dropdown-item href="#">{{ $t('navBar.statistics.faction') }}</b-dropdown-item>
         </b-nav-item-dropdown>
@@ -46,12 +46,43 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 #navBar{
   background-image: url("~assets/images/navBar/background_tile.png");
   background-size: contain;
   background-color: black!important;
+
+  & a {
+    display: flex;
+    color: $primary;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  & :hover {
+    color: $primary-darker;
+
+    & > span {
+      color: $primary-darker;
+    }
+    }
+
+  & :active {
+    color: $primary-brighter;
+
+    & > span {
+      color: $primary-brighter;
+    }
+  }
+
+  @media (max-width: $breakpoint-main){
+    background-image: url("~assets/images/navBar/mobile_background_frame.svg");
+  }
+
 }
 
 .BFME-btn{
