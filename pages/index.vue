@@ -1,17 +1,9 @@
 <template>
-  <div>
-    <navBar />
-  </div>
+  <main></main>
 </template>
 
 <script>
-import navBar from '../components/navBar'
 
-export default {
-  components: {
-    navBar
-  }
-}
 </script>
 
 <style></style>

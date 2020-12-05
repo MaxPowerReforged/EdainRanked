@@ -2,3 +2,14 @@
     font-family: "AlbertusMT";
     src: local("AlbertusMT"), url(~assets/fonts/albertusmt.otf);
 }
+
+@font-face {
+    font-family: "LotrTitles";
+    src: local("LotrTitles"), url(~assets/fonts/sachwt__.ttf);
+}
+
+h1{
+    font-family: "LotrTitles";
+    font-size: 26px;
+    margin: 30px 0;
+}

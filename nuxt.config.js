@@ -6,7 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'EdainRanked',
+    title: 'Edain Ranked',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -32,7 +32,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-
+    '@nuxt/typescript-build'
   ],
 
   modules: [
@@ -56,5 +56,9 @@ export default {
       '~/assets/scss/_text.scss',
       '~/assets/scss/_breakpoints.scss'
     ]
+  },
+  server: {     
+    port: 8000,     
+    host: '0.0.0.0',   
   }
 }

@@ -2,3 +2,48 @@
     font-family: "AlbertusMT";
     color: $primary;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.er-table {
+    border: 3px solid $primary;
+    background-color: $secondary;
+
+    @media (max-width: $breakpoint-main){
+        font-size: 12px;
+    }
+}
+
+.er-table-head {
+    background-color: $dark;
+
+    div {
+        font-family: "LotrTitles";
+        font-size: 12px;
+
+        @media (max-width: $breakpoint-main){
+            font-size: 8px
+        }
+    }
+    
+}
+
+.er-table-row {
+    border: 1px solid $primary;
+}
+
+.er-table-row:hover {
+    background-color: $secondary-darker;
+}
+.er-table-cell {
+    border: 1px solid $primary;
+    padding: 12px !important;
+
+    @media (max-width: $breakpoint-main){
+        padding: 7px !important;
+    }
+}
