@@ -13,7 +13,7 @@
           <b-dropdown-item href="#">{{ $t('navBar.home.rules') }}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item class="BFME-btn" :to="localePath('/ranking')">{{ $t('navBar.ranking') }}</b-nav-item>
-        <b-nav-item class="BFME-btn" href="#">{{ $t('navBar.replayDb') }}</b-nav-item>
+        <b-nav-item class="BFME-btn" :to="localePath('/replays')">{{ $t('navBar.replayDb') }}</b-nav-item>
         <b-nav-item-dropdown menu-class="w-100" class="BFME-btn" :text="$t('navBar.statistics.statistics')">
           <b-dropdown-item href="#">{{ $t('navBar.statistics.general') }}</b-dropdown-item>
           <b-dropdown-item href="#">{{ $t('navBar.statistics.faction') }}</b-dropdown-item>
