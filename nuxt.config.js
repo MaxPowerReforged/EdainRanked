@@ -43,7 +43,15 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'https://crehw12bu8.execute-api.eu-central-1.amazonaws.com/Beta', // Used as fallback if no runtime config is provided
+    headers: {
+      common: {
+        "Content-type": "application/json",
+        "Accept": "application/json"
+      }
+    }
+  },
 
   i18n: I18N,
 

@@ -45,8 +45,7 @@ export default {
     },
     methods: {
       async fetchRanking(ctx) {
-        return await fetch('https://crehw12bu8.execute-api.eu-central-1.amazonaws.com/Beta/display-ranking')
-          .then(response=>response.json());
+        return await this.$axios.$get('/display-ranking');
       }
     }
 }
