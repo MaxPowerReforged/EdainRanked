@@ -41,14 +41,14 @@
 
 <script>
 export default {
-  name: 'navBar'
+  name: 'TheNavBar'
 }
 </script>
 
 <style lang="scss">
 
 #navBar{
-  background-image: url("~assets/images/navBar/background_tile.png");
+  background-image: url("~assets/images/TheNavBar/background_tile.png");
   background-size: auto 71px;
   background-repeat: repeat-x;
   background-color: black!important;
@@ -110,7 +110,7 @@ export default {
     @media (max-width: $breakpoint-main){
 
       margin-top: 80px;
-      background-image: url("~assets/images/navBar/mobile_background_frame.svg");
+      background-image: url("~assets/images/TheNavBar/mobile_background_frame.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center bottom;
@@ -126,7 +126,7 @@ export default {
 }
 
 .BFME-btn{
-  background-image: url("~assets/images/navBar/button_base.svg");
+  background-image: url("~assets/images/TheNavBar/button_base.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -142,24 +142,24 @@ export default {
 }
 
 .BFME-btn:hover{
-  background-image: url("~assets/images/navBar/button_hover.svg");
+  background-image: url("~assets/images/TheNavBar/button_hover.svg");
 }
 
 .BFME-btn:active{
-  background-image: url("~assets/images/navBar/button_flash.svg");
+  background-image: url("~assets/images/TheNavBar/button_flash.svg");
 }
 
 .btn-square{
   width: 55px;
-  background-image: url("~assets/images/navBar/button_square_base.svg");
+  background-image: url("~assets/images/TheNavBar/button_square_base.svg");
 }
 
 .btn-square:hover{
-  background-image: url("~assets/images/navBar/button_square_hover.svg");
+  background-image: url("~assets/images/TheNavBar/button_square_hover.svg");
 }
 
 .btn-square:active{
-  background-image: url("~assets/images/navBar/button_square_flash.svg");
+  background-image: url("~assets/images/TheNavBar/button_square_flash.svg");
 }
 
 </style>

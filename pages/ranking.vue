@@ -1,16 +1,16 @@
 <template>
 <main>
   <h1>Ranking</h1>
-  <rankTable id="rankingTable" />
+  <TheRankingTable id="rankingTable" />
 </main>
 </template>
 
 <script>
-import rankTable from '../components/rankTable'
+import TheRankingTable from '../components/TheRankingTable'
 
 export default {
   components: {
-    rankTable
+    TheRankingTable
   }
 }
 </script>

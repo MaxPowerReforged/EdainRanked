@@ -1,20 +1,26 @@
 <template>
 <main>
-  <h1>Replays</h1>
-  <replayTable id="replayTable" />
+  <h1>{{ $t('replays.title') }}</h1>
+  <TheReplayTable id="replayTable" />
 </main>
 </template>
 
 <script>
-import replayTable from '../components/replayTable'
+import TheReplayTable from '../components/TheReplayTable'
 
 export default {
   components: {
-    replayTable
+    TheReplayTable
   }
 }
 </script>
 
 <style>
+
+#replayTable{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
 
 </style>

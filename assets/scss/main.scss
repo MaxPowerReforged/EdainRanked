@@ -47,3 +47,30 @@ main {
         padding: 7px !important;
     }
 }
+
+input{
+    border: 2px solid $primary !important;
+    border-radius: 0 !important;
+    color: $primary !important;
+    box-shadow: 0 0 10px $secondary !important;
+    background-color: $dark !important;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $primary-dark !important;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primary-dark !important;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $primary-dark !important;
+}
+
+.page-item{
+    color: $primary !important;
+    border-color: $primary !important;
+    background-color: $dark !important;
+}
