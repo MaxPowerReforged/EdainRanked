@@ -27,7 +27,23 @@ export default {
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: {
+    dirs: [
+      '~/components',
+      {
+        path: '~/components/statistics',
+        prefix: 'Statistics'
+      },
+      {
+        path: '~/components/statistics/charts',
+        prefix: 'StatisticsCharts'
+      },
+      {
+        path: '~/components/statistics/tables',
+        prefix: 'StatisticsTables'
+      }
+    ]
+  },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [

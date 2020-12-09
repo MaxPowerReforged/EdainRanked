@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <TheNavBar />
-    <Nuxt />
-  </div>
+  <aside>Filters placeholder</aside>
 </template>
 
 <script>

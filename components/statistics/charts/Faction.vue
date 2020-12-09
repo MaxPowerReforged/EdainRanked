@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <TheNavBar />
-    <Nuxt />
-  </div>
+  <p>Faction chart placeholder</p>
 </template>
 
 <script>

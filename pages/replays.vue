@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import TheReplayTable from '../components/TheReplayTable'
-
 export default {
-  components: {
-    TheReplayTable
-  }
+
 }
 </script>
 

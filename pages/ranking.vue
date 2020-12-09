@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import TheRankingTable from '../components/TheRankingTable'
-
 export default {
-  components: {
-    TheRankingTable
-  }
+
 }
 </script>
 
