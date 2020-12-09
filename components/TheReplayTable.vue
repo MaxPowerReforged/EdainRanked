@@ -91,6 +91,10 @@ export default {
   width: 20%;
   align-self: flex-end;
   margin: 20px 0;
+
+  @media (max-width: $breakpoint-main){
+    width: 45%;
+  }
 }
 
 </style>

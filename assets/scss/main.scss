@@ -41,7 +41,7 @@ main {
 }
 .er-table-cell {
     border: 1px solid $primary;
-    padding: 12px !important;
+    padding: 10px !important;
 
     @media (max-width: $breakpoint-main){
         padding: 7px !important;
@@ -69,8 +69,20 @@ input{
     color: $primary-dark !important;
 }
 
-.page-item{
+.page-link{
     color: $primary !important;
     border-color: $primary !important;
-    background-color: $dark !important;
+    background-color: $secondary-darker !important;
+}
+
+.active{
+    .page-link{
+        background-color: $secondary !important;
+    }
+}
+
+.disabled{
+    .page-link{
+        color: $primary-darker !important;
+    }
 }
