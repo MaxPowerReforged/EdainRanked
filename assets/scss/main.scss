@@ -3,6 +3,10 @@
     color: $primary;
 }
 
+body{
+    background-color: $dark;
+}
+
 main {
     display: flex;
     flex-direction: column;

@@ -1,8 +1,8 @@
 <template>
 <article id="factionWinrate">
   <h2>Faction Winrate</h2>
-  <StatisticsChartsFactionWinrate/>
-  <StatisticsTablesFactionWinrate/>
+  <StatisticsChartsRelativeWinrates/>
+  <StatisticsTablesRelativeWinrates/>
 </article>
 </template>
 

@@ -16,3 +16,114 @@ $chart-7: #1C8FAB;
 $chart-8:  #19819A;
 $chart-9: #167389;
 $chart-10: #146478;
+
+$chart-opacity: 0.9;
+
+$gondor-primary:  #FBFBFB;
+$gondor-primary-translucent: rgba($gondor-primary, $chart-opacity);
+$gondor-secondary:  #232323;
+
+$rohan-primary:  #F6E74D;
+$rohan-primary-translucent: rgb($rohan-primary, $chart-opacity);
+$rohan-secondary: #153112;
+
+$imladris-primary:  #F3F4F6;
+$imladris-primary-translucent: rgba($imladris-primary, $chart-opacity);
+$imladris-secondary:  #142159;
+
+$lothlorien-primary: #A4F999;
+$lothlorien-primary-translucent: rgba($lothlorien-primary, $chart-opacity);
+$lothlorien-secondary: #203517;
+
+$erebor-primary: #F9F1AF;
+$erebor-primary-translucent: rgba($erebor-primary, $chart-opacity);
+$erebor-secondary:  #4C1E04;
+
+$iron-hills-primary: #E38658;
+$iron-hills-primary-translucent: rgba($iron-hills-primary, $chart-opacity);
+$iron-hills-secondary: #421521;
+
+$ered-luin-primary: #F2DC51;
+$ered-luin-primary-translucent: rgba($ered-luin-primary, $chart-opacity);
+$ered-luin-secondary: #042B57;
+
+$mordor-primary: #EF4444;
+$mordor-primary-translucent: rgba($mordor-primary, $chart-opacity);
+$mordor-secondary: #1D1B1A;
+
+$isengard-primary:  #FBFBFB;
+$isengard-primary-translucent: rgba($isengard-primary, $chart-opacity);
+$isengard-secondary: #121212;
+
+$angmar-primary:  #76EFFD;
+$angmar-primary-translucent: rgba($angmar-primary, $chart-opacity);
+$angmar-secondary: #282C30;
+
+$misty-mountains-primary: #CF8D3C;
+$misty-mountains-primary-translucent: rgba($misty-mountains-primary, $chart-opacity);
+$misty-mountains-secondary:  #231713;
+
+:export{
+    primaryBrighter: $primary-brighter;
+    primary: $primary;
+    primaryDark: $primary-dark;
+    primaryDarker: $primary-darker;
+    secondary: $secondary;
+    secondaryDarker: $secondary-darker;
+    dark: $dark;
+
+    chart1: $chart-1;
+    chart2: $chart-2;
+    chart3: $chart-3;
+    chart4: $chart-4;
+    chart5: $chart-5;
+    chart6: $chart-6;
+    chart7: $chart-7;
+    chart8: $chart-8;
+    chart9: $chart-9;
+    chart10: $chart-10;
+
+    gondorPrimary: $gondor-primary;
+    gondorPrimaryTranslucent: $gondor-primary-translucent;
+    gondorSecondary: $gondor-secondary;
+
+    rohanPrimary: $rohan-primary;
+    rohanPrimaryTranslucent: $rohan-primary-translucent;
+    rohanSecondary: $rohan-secondary;
+
+    imladrisPrimary: $imladris-primary;
+    imladrisPrimaryTranslucent: $imladris-primary-translucent;
+    imladrisSecondary: $imladris-secondary;
+
+    lothlorienPrimary: $lothlorien-primary;
+    lothlorienPrimaryTranslucent: $lothlorien-primary-translucent;
+    lothlorienSecondary: $lothlorien-secondary;
+
+    ereborPrimary: $erebor-primary;
+    ereborPrimaryTranslucent: $erebor-primary-translucent;
+    ereborSecondary: $erebor-secondary;
+
+    ironHillsPrimary: $iron-hills-primary;
+    ironHillsPrimaryTranslucent: $iron-hills-primary-translucent;
+    ironHillsSecondary: $iron-hills-secondary;
+
+    eredLuinPrimary: $ered-luin-primary;
+    eredLuinPrimaryTranslucent: $ered-luin-primary-translucent;
+    eredLuinSecondary: $ered-luin-secondary;
+
+    mordorPrimary: $mordor-primary;
+    mordorPrimaryTranslucent: $mordor-primary-translucent;
+    mordorSecondary: $mordor-secondary;
+
+    isengardPrimary: $isengard-primary;
+    isengardPrimaryTranslucent: $isengard-primary-translucent;
+    isengardSecondary: $isengard-secondary;
+
+    angmarPrimary: $angmar-primary;
+    angmarPrimaryTranslucent: $angmar-primary-translucent; 
+    angmarSecondary: $angmar-secondary;
+
+    mistyMountainsPrimary: $misty-mountains-primary;
+    mistyMountainsPrimaryTranslucent: $misty-mountains-primary-translucent;
+    mistyMountainsSecondary: $misty-mountains-secondary;
+}

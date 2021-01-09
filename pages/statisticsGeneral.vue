@@ -2,7 +2,7 @@
   <main>
     <h1>Statistics</h1>
     <section id="general-charts">
-        <StatisticsFactionWinrate/>
+        <StatisticsRelativeWinrates/>
         <StatisticsMaps/>
         <StatisticsHosts/>
     </section>
