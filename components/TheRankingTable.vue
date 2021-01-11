@@ -5,7 +5,7 @@
         table-class="er-table"
         thead-class="er-table er-table-head"
         tbody-tr-class="er-table-row"
-        :items="fetchRanking"
+        :items="allRanking"
         :fields="fields">
         <template #cell(index)="data">
           {{ data.index + 1 }}
@@ -29,25 +29,29 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
-    name: 'navBar',
-    data() {
-      const $t = this.$t.bind(this);
-      return {
-        fields: [
-          { key: 'index', label: $t('ranking.number'), class: "er-table-cell", sortable: true },
-          { key: 'Player_Name', label: $t('ranking.player'), class: "er-table-cell" },
-          { key: 'elo', label: $t('ranking.elo'), class: "er-table-cell", sortable: true},
-          { key: 'winLose', label: $t('ranking.winLose'), class: "er-table-cell" },
-          { key: 'games', label: $t('ranking.games'), class: "er-table-cell" },
-        ]
-      }
-    },
-    methods: {
-      async fetchRanking(ctx) {
-        return await this.$axios.$get('/display-ranking');
-      }
+  name: 'navBar',
+  data() {
+    const $t = this.$t.bind(this);
+    return {
+      fields: [
+        { key: 'index', label: $t('ranking.number'), class: "er-table-cell", sortable: true },
+        { key: 'Player_Name', label: $t('ranking.player'), class: "er-table-cell" },
+        { key: 'elo', label: $t('ranking.elo'), class: "er-table-cell", sortable: true},
+        { key: 'winLose', label: $t('ranking.winLose'), class: "er-table-cell" },
+        { key: 'games', label: $t('ranking.games'), class: "er-table-cell" },
+      ]
     }
+  },
+  methods: {
+    ...mapGetters('ranking', ['allRanking']),
+    ...mapActions('ranking', ['fetchRanking']),
+  },
+  mounted() {
+    this.fetchRanking();
+  }
 }
 </script>
 

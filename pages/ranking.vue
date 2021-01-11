@@ -6,17 +6,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
 
-export default {
-  mounted() {
-    this.fetchRanking();
-  },
-  methods: {
-    ...mapActions('ranking', ['fetchRanking'])
-  }
-
-}
 </script>
 
 <style lang="scss">
