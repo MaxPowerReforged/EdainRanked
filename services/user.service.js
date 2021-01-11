@@ -1,14 +1,14 @@
 import endpoints from '@/static/endpoints';
-import axios from 'axios';
 
-class UserService {
+export default class UserService {
+    constructor(axios) {
+        this.axios = axios;
+    }
     getAll() {
-        return axios.get(endpoints.getPlayers);
+        return this.axios.get(endpoints.getPlayers);
     }
 
     create(data) {
-        return axios.post(endpoints.postUser, data);
+        return this.axios.post(endpoints.postUser, data);
     }
 }
-
-export default new UserService();

@@ -1,14 +1,14 @@
 import endpoints from '@/static/endpoints';
-import axios from 'axios';
 
-class ReplayService {
+export default class ReplayService {
+    constructor(axios) {
+        this.axios + axios;
+    }
     getAll() {
-        return axios.get(endpoints.getReplays);
+        return this.axios.get(endpoints.getReplays);
     }
 
     create(data) {
-        return axios.post(endpoints.postReplay, data);
+        return this.axios.post(endpoints.postReplay, data);
     }
 }
-
-export default new ReplayService();

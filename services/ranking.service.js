@@ -1,7 +1,7 @@
 import endpoints from '@/static/endpoints';
 
 export default class RankingService {
-    constructor(axios){
+    constructor(axios) {
         this.axios = axios
     }
     getAll() {

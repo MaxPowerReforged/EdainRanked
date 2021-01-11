@@ -1,8 +1,7 @@
 import endpoints from '@/static/endpoints';
-import axios from 'axios';
 
-class MapService {
-
+export default class MapService {
+    constructor(axios) {
+        this.axios = axios;
+    }
 }
-
-export default new MapService();

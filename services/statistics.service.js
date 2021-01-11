@@ -1,14 +1,14 @@
 import endpoints from '@/static/endpoints';
-import axios from 'axios';
 
-class StatisticsService {
+export default class StatisticsService {
+    constructor(axios) {
+        this.axios = axios;
+    }
     getAll() {
-        return axios.get(endpoints.getStatistics);
+        return this.axios.get(endpoints.getStatistics);
     }
 
     getFactionAll() {
-        return axios.get(endpoints.getStatisticsFactions);
+        return this.axios.get(endpoints.getStatisticsFactions);
     }
 }
-
-export default new StatisticsService();
