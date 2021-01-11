@@ -1,5 +1,20 @@
+import StatisticsService from '../services/statistics.service';
+
 export const state = () => ({
-    statistics: 'statisticsFactions'
-    //everything that is stored comes here
-    //state as function, mutations as objects
-  })
+    factionStatistics: []
+  });
+
+export const getters = {
+  allFactionStatistics: (state) => state.factionStatistics,
+}
+
+export const mutations = {
+  setFactionStatistics: (state, data) => state.factionStatistics = [...data]
+}
+
+export const actions = {
+  async fetchFactionStatistics({commit}) {
+    const response = await new StatisticsService(this.$axios).getFactionAll();
+    commit('setFactionStatistics', response.data);
+  }
+}
