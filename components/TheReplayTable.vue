@@ -63,17 +63,20 @@ export default {
           { key: 'Game_Date', label: $t('replays.table.date'), class: "er-table-cell" },
           { key: 'Game_Description', label: $t('replays.table.description'), class: "er-table-cell" },
         ],
-        items: [],
         currentPage: 1,
         perPage: 10,
         totalRows: 0,
         filter: null
       }
     },
-    mounted() {
-      let replays = this.fetchReplays;
-      this.items = replays;
-      this.totalRows = replays.length;
+    async mounted() {
+      let replays = await this.fetchReplays();
+      this.totalRows = this.allReplays().length;
+    },
+    computed: {
+      items(){
+        return this.allReplays();
+      },
     },
     methods: {
       ...mapGetters('replays', ['allReplays']),

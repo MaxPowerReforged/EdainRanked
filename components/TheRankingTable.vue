@@ -5,7 +5,7 @@
         table-class="er-table"
         thead-class="er-table er-table-head"
         tbody-tr-class="er-table-row"
-        :items="allRanking"
+        :items="ranking"
         :fields="fields">
         <template #cell(index)="data">
           {{ data.index + 1 }}
@@ -48,6 +48,11 @@ export default {
   methods: {
     ...mapGetters('ranking', ['allRanking']),
     ...mapActions('ranking', ['fetchRanking']),
+  },
+  computed: {
+    ranking(){
+      return this.allRanking();
+    }
   },
   mounted() {
     this.fetchRanking();
