@@ -2,7 +2,7 @@ import endpoints from '@/static/endpoints';
 
 export default class ReplayService {
     constructor(axios) {
-        this.axios + axios;
+        this.axios = axios;
     }
     getAll() {
         return this.axios.get(endpoints.getReplays);

@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'navBar',
     data() {
@@ -68,19 +70,22 @@ export default {
         filter: null
       }
     },
-    async mounted() {
-      let replays = await this.$axios.$get('/display-replays');
+    mounted() {
+      let replays = this.fetchReplays;
       this.items = replays;
       this.totalRows = replays.length;
     },
     methods: {
+      ...mapGetters('replays', ['allReplays']),
+      ...mapActions('replays', ['fetchReplays']),
+
       dateFormatter(date) {
         return date.substring(8, 10) + date.substring(4, 8) + date.substring(0, 4);
       },
       onFiltered(filteredItems) {
         this.totalRows = filteredItems.length
         this.currentPage = 1
-      }
+      },
     }
 }
 </script>
