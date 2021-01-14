@@ -14,7 +14,7 @@
         </b-nav-item-dropdown>
         <b-nav-item class="BFME-btn" :to="localePath('/ranking')">{{ $t('navBar.ranking') }}</b-nav-item>
         <b-nav-item class="BFME-btn" :to="localePath('/replays')">{{ $t('navBar.replayDb') }}</b-nav-item>
-        <b-nav-item-dropdown menu-class="w-100" class="BFME-btn" :text="$t('navBar.statistics.statistics')">
+        <b-nav-item-dropdown menu-class="w-100" class="BFME-btn disabled" :text="$t('navBar.statistics.statistics')" disabled>
           <b-dropdown-item :to="localePath('/statisticsGeneral')">{{ $t('navBar.statistics.general') }}</b-dropdown-item>
           <b-dropdown-item :to="localePath('/statisticsFactions')">{{ $t('navBar.statistics.faction') }}</b-dropdown-item>
         </b-nav-item-dropdown>
@@ -141,6 +141,14 @@ export default {
   }
 }
 
+.BFME-btn.disabled{
+  opacity: 0.7;
+}
+
+.BFME-btn.disabled:hover{
+  background-image: url("~assets/images/TheNavBar/button_base.svg");
+}
+
 .BFME-btn:hover{
   background-image: url("~assets/images/TheNavBar/button_hover.svg");
 }
@@ -152,6 +160,7 @@ export default {
 .btn-square{
   width: 55px;
   background-image: url("~assets/images/TheNavBar/button_square_base.svg");
+  margin: 5px;
 }
 
 .btn-square:hover{

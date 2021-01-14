@@ -10,6 +10,7 @@
 
 <script>
 import colors from '../../assets/scss/_colors.scss';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   props: ['selectedFaction'],
@@ -117,7 +118,14 @@ export default {
         },
       ]
     }
-  }
+  },
+  methods: {
+    ...mapGetters('statisticsFactions', ['allFactionStatistics']),
+    ...mapActions('statisticsFactions', ['fetchFactionStatistics']),
+  },
+  mounted() {
+    this.fetchFactionStatistics();
+  },
 }
 </script>
 
