@@ -18,7 +18,7 @@
           <b-dropdown-item :to="localePath('/statisticsGeneral')">{{ $t('navBar.statistics.general') }}</b-dropdown-item>
           <b-dropdown-item :to="localePath('/statisticsFactions')">{{ $t('navBar.statistics.faction') }}</b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item class="BFME-btn" href="#">{{ $t('navBar.upload') }}</b-nav-item>
+        <b-nav-item class="BFME-btn" v-b-modal.upload-modal href="#">{{ $t('navBar.upload') }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
 
@@ -32,10 +32,15 @@
       <b-nav-item-dropdown class="BFME-btn btn-square" right>
         <template #button-content>User</template>
         <b-dropdown-item href="#">Profile</b-dropdown-item>
+        <b-dropdown-item href="#" v-b-modal.register-modal>Register</b-dropdown-item>
+        <b-dropdown-item href="#" v-b-modal.login-modal>Login</b-dropdown-item>
         <b-dropdown-item href="#">Sign Out</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-navbar-nav>
   </b-navbar>
+  <TheRegisterForm />
+  <TheLoginForm />
+  <TheUploadForm />
 </div>
 </template>
 
