@@ -10,15 +10,32 @@
       <h3>Register</h3>
     </template>
 
+    <b-form-input type="text" placeholder="username"></b-form-input>
+    <b-form-input type="email" placeholder="email"></b-form-input>
+    <b-form-input type="password" placeholder="password"></b-form-input>
+
     <template #modal-footer>
       <b-button class="BFME-btn">Register</b-button>
+      <p @click="openLoginModal">Already registered? Login!</p>
     </template>
   </b-modal>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      username: "",
+      email: "",
+      password: "",
+    }
+  },
+  methods: {
+    openLoginModal() {
+      this.$bvModal.hide('register-modal')
+      this.$bvModal.show('login-modal')
+    }
+  }
 }
 </script>
 

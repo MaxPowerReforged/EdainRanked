@@ -6,5 +6,3 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
    region: process.env.REGION,
 });
-
-Vue.use(AWS);

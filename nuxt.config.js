@@ -18,7 +18,8 @@ export default {
   ],
   plugins: [
     { src: '~/plugins/highcharts.js' },
-    { src: '~/plugins/aws.js'}
+    { src: '~/plugins/aws.js'},
+    { src: '~/plugins/cognito.js'},
   ],
   components: {
     dirs: [
