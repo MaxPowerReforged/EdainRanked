@@ -1,22 +1,20 @@
 <template>
-  <main>
-    {{ name }} {{ replays }}
-  </main>
+  <main>{{ name }} {{ replays }}</main>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
   computed: {
     ...mapState({
-      name: 'name',
+      name: "name"
     }),
-    ...mapState('replays', {
-      replays: 'replaysTest',
+    ...mapState("replays", {
+      replays: "replaysTest"
     })
   }
-}
+};
 </script>
 
 <style></style>
