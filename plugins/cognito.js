@@ -11,26 +11,25 @@ class Cognito {
     ClientId: process.env.CLIENT_ID
   });
 
-  AuthenticateUser(username, password) {
-    var authenticationData = {
+  authenticateUser(username, password) {
+    let authenticationData = {
       Username: username,
       Password: password
     };
-    var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(
+    let authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(
       authenticationData
     );
 
-    var userData = {
+    let userData = {
       Username: username,
       Pool: this.userPool
     };
-    var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+    let cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
 
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: function(result) {
-        var accessToken = result.getAccessToken().getJwtToken();
-
         console.log("cognito authentication successful!!!");
+        return result.getAccessToken().getJwtToken();
       },
 
       onFailure: function(err) {
