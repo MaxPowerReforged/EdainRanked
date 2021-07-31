@@ -14,8 +14,9 @@ export default {
   css: ["~/assets/scss/main.scss"],
   plugins: [
     { src: "~/plugins/highcharts.js" },
-    { src: "~/plugins/aws.js" },
-    { src: "~/plugins/cognito.js" }
+    { src: "~/plugins/axiosDebugger.js"}
+    //{ src: "~/plugins/aws.js" },
+    //{ src: "~/plugins/cognito.js" }
   ],
   components: {
     dirs: [
@@ -47,7 +48,7 @@ export default {
     "@nuxtjs/style-resources"
   ],
   axios: {
-    baseURL: process.env.BASE_URL,
+    baseURL: "https://crehw12bu8.execute-api.eu-central-1.amazonaws.com/Beta/",
     headers: {
       common: {
         "Content-type": "application/json",
@@ -63,6 +64,9 @@ export default {
       "~/assets/scss/_text.scss",
       "~/assets/scss/_breakpoints.scss"
     ]
+  },
+  router: {
+    base: '/EdainRanked/'
   },
   server: {
     port: 8000,

@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: $dark;
+    background-color: transparent;
 }
 
 main {
@@ -33,7 +33,7 @@ main {
             font-size: 8px
         }
     }
-    
+
 }
 
 .er-table-row {
@@ -64,11 +64,11 @@ input{
     color: $primary-dark !important;
     opacity: 1; /* Firefox */
 }
-  
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: $primary-dark !important;
 }
-  
+
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: $primary-dark !important;
 }
