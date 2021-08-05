@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/replays", {data:[{}],fetch:[],mutations:[]});

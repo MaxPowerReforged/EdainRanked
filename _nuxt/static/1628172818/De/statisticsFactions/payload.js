@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/De/statisticsFactions", {data:[{}],fetch:[],mutations:[]});
